@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\PostController;
+use App\Livewire\TodoList;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -28,4 +29,5 @@ Route::middleware([
     })->name('dashboard');
 
     Route::get('/posts', [PostController::class, 'index'])->name('posts');
+    Route::get('/todo-list', TodoList::class)->name('todo-list');
 });
