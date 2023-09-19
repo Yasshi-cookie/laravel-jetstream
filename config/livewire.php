@@ -38,6 +38,7 @@ return [
     |
     */
 
+    // フルページコンポーネントの場合適用されるレイアウトファイルを指定
     'layout' => 'components.layouts.app',
 
     /*
