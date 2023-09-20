@@ -1,5 +1,5 @@
 <div>
-    <input type="text" wire:model="todo" placeholder="Todo...">
+    <input type="text" wire:model="todo" placeholder="Todo..." />
 
     <button class="success-btn" wire:click="add">Add Todo</button>
 

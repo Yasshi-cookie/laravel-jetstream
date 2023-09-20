@@ -13,11 +13,8 @@
         </div>
 
         <div class="my-4">
-            <button
-                type="button"
-                class="main-btn"
-                wire:click='addTag' >
-                    タグを追加
+            <button type="button" class="main-btn" wire:click="addTag">
+                タグを追加
             </button>
         </div>
 
@@ -28,12 +25,16 @@
                         <label>タグ {{ $index + 1 }}</label>
                     </div>
                     <div class="flex gap-2">
-                        <input type="text" wire:model.blur="tags.{{ $index }}">
+                        <input
+                            type="text"
+                            wire:model.blur="tags.{{ $index }}"
+                        />
                         <button
                             type="button"
                             class="danger-btn"
-                            wire:click="removeTag({{ $index }})" >
-                                削除
+                            wire:click="removeTag({{ $index }})"
+                        >
+                            削除
                         </button>
                         {{ $tag }}
                     </div>
