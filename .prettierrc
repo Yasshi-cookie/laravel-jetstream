@@ -1,0 +1,19 @@
+{
+    "plugins": [
+      "./node_modules/prettier-plugin-blade/",
+      "./node_modules/prettier-plugin-tailwindcss/"
+    ],
+    "singleQuote": true,
+    "overrides": [
+      {
+        "files": ["*.blade.php"],
+        "options": {
+          "parser": "blade",
+          "singleQuote": true,
+          "bracketSpacing": true,
+          "semi": true,
+          "quoteProps": "preserve"
+        }
+      }
+    ]
+}
