@@ -1,11 +1,11 @@
 <div>
-    <input type="text" wire:model="todo" placeholder="Todo...">
+    <input type="text" wire:model="title" placeholder="Todo...">
 
     <button class="success-btn" wire:click="add">Add Todo</button>
 
     <ul>
         @foreach ($todoList as $todo)
-            <li>{{ $todo }}</li>
+            <li>{{ $todo->title }}</li>
         @endforeach
     </ul>
 </div>
