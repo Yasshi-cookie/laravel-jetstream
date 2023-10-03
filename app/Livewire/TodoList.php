@@ -23,7 +23,7 @@ class TodoList extends Component
     */
     public string $title = '';
     public int $maxTodos = 10;
-    public bool $showTods = false;
+    public bool $showTodos = false;
     public int $todoFilter = 10;
 
     /*
