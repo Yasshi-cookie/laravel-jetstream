@@ -1,6 +1,6 @@
 <div class="mb-6 mx-6">
     <div class="my-2 flex gap-2">
-        <input type="text" wire:model.live="title" placeholder="Todo..." />
+        <input type="text" wire:model="title" placeholder="Todo..." />
         <button class="success-btn" wire:click="add">Add Todo</button>
         <button class="secondary-btn" x-on:click="$wire.title = ''">Clear</button>
     </div>
@@ -8,8 +8,8 @@
     <div class="my-2 flex gap-1">
         <p>Todo character length:</p>
         <p
-            :class="$wire.title.length < 16 ? '' : 'text-red-500'"
-            x-text="$wire.title.length < 16 ? $wire.title.length : '16文字以内で入力してください。'"
+            :class="$wire.title.length < 64 ? '' : 'text-red-500'"
+            x-text="$wire.title.length < 64 ? $wire.title.length : '64文字以内で入力してください。'"
         ></p>
     </div>
 

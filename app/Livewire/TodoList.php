@@ -6,7 +6,7 @@ use App\Models\Todo;
 use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Support\Facades\Auth;
-use Illuminate\Support\Stringable;
+use Livewire\Attributes\Rule;
 use Livewire\Attributes\Title;
 use Livewire\Component;
 
@@ -21,6 +21,7 @@ class TodoList extends Component
     | Array, String, Integer, Float, Boolean, and Null
     |
     */
+    #[Rule('required|min:1|max:64')]
     public string $title = '';
     public int $maxTodos = 10;
     public bool $showTodos = false;
@@ -52,6 +53,8 @@ class TodoList extends Component
 
     public function add()
     {
+        $this->validate();
+
         Todo::create([
             'user_id' => Auth::user()->id,
             'title' => $this->title,
