@@ -10,9 +10,17 @@ class TodoType extends TypeValueObject
     public const NOTE = 2;
 
     /**
+     * @param int $type
+     */
+    public function __construct(int $type = TodoType::TASK)
+    {
+        parent::__construct($type);
+    }
+
+    /**
      * @return array<int, string>
      */
-    public function toArray(): array
+    public static function toArray(): array
     {
         return [
             self::TASK => 'タスク',

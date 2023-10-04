@@ -36,7 +36,7 @@ abstract class TypeValueObject implements Wireable
      */
     public function getName(): string
     {
-        return $this->toArray()[$this->type];
+        return self::toArray()[$this->type];
     }
 
     /**
@@ -60,7 +60,7 @@ abstract class TypeValueObject implements Wireable
     /**
      * @return array<int, string>
      */
-    abstract public function toArray(): array;
+    abstract public static function toArray(): array;
 
     /*
     |--------------------------------------------------------------------------
