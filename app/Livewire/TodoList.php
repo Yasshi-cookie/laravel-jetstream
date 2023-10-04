@@ -65,6 +65,13 @@ class TodoList extends Component
         $this->reset('todo');
     }
 
+    public function delete($id)
+    {
+        $todo = Todo::findOrFail($id);
+
+        $todo->delete();
+    }
+
     public function render()
     {
         return view('livewire.todo-list');

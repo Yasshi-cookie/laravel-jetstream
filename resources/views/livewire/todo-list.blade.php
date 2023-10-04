@@ -22,7 +22,7 @@
                 >
                     {{ $todo->title }}
                 </div>
-                <button class="danger-btn">Delete</button>
+                <button class="danger-btn" wire:click="delete({{ $todo->id }})">Delete</button>
             </li>
         @endforeach
     </ul>
